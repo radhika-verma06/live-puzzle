@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# 🧩 Instant Live Puzzle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The ultimate arcade-style computer vision puzzle game.**
 
-Currently, two official plugins are available:
+Live Puzzle transforms your camera feed into a high-energy, timed challenge. Frame anything in your world using a square hand gesture, hold for the lock-on, and watch it instantly shatter into a puzzle you must solve against the clock.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🚀 **Play Now**: [https://live-puzzle-khaki.vercel.app](https://live-puzzle-khaki.vercel.app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **⚡ Instant Capture**: No menus, no fluff. Use a square hand gesture to capture and start playing immediately.
+- **✋ AI Hand Tracking**: Powered by MediaPipe Vision, the game detects your thumb and index fingers to form a precise capture frame.
+- **🎮 Arcade Polish**: Satisfying animations, camera flash effects, and "Ready, Set, Go" transitions.
+- **🏆 High Stakes**: Track your moves and beat the timer to earn your trophy.
+- **🎨 Custom Themes**: Switch between Neon, Aura, Industrial, and Classic styles in the Puzzle Tuning menu.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🕹️ How to Play
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Frame**: Face your camera and form a "square" using your thumb and index fingers.
+2.  **Lock-on**: Wait for the blue viewfinder to glow gold and reach 100%.
+3.  **Solve**: The image will instantly shatter and shuffle. Drag pieces to their correct locations before the timer runs out!
+4.  **Win**: Complete the puzzle to see your score and celebrate with confetti!
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technology Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React + Vite**: For a lightning-fast, modern development experience.
+- **MediaPipe Vision**: For real-time AI hand landmark detection.
+- **Framer Motion**: For premium, physics-based animations.
+- **Tailwind CSS v4**: For the cutting-edge glassmorphism and neon UI.
+- **Zustand**: For lightweight, reliable game state management.
+
+## 📦 Getting Started Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Created with ❤️ by [Radhika Verma](https://github.com/radhika-verma06)
