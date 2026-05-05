@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --neon-blue: #00f2fe;
+  --neon-purple: #764ba2;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+@keyframes aura-shift {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+  50% { transform: translate(-45%, -55%) scale(1.1); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+}
+
+.aura-animation {
+  background: radial-gradient(circle at 20% 20%, #4facfe, transparent 40%),
+              radial-gradient(circle at 80% 80%, #764ba2, transparent 40%),
+              radial-gradient(circle at 50% 50%, #000000);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.aura-animation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(79, 172, 254, 0.1) 0%, transparent 70%);
+  animation: aura-shift 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.neon-animation {
+  background: #050505;
+  background-image: radial-gradient(rgba(0, 242, 254, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.snap-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: white;
+  animation: flash 0.3s ease-out forwards;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
